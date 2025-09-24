@@ -32,6 +32,11 @@ app.use('/api/users', require('./routes/users')); // User routes
 app.use('/api/auth', require('./routes/auth')); // Auth routes
 app.use('/api/posts', require('./routes/posts')); // Blog post routes
 
+// Health check route
+app.get('/health', (req, res) => {
+  res.status(200).send('Server is healthy');
+});
+
 // Swagger documentation setup
 const swaggerDocument = require('./swagger.json');
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
