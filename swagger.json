@@ -89,7 +89,24 @@
       },
       "post": {
         "summary": "Create a new post",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "title",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "content",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "201": {
             "description": "Post created",
