@@ -1,0 +1,54 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "API documentation",
+    "version": "1.0.0",
+    "title": "Blog API Service"
+  },
+  "host": "localhost:5000",
+  "basePath": "/api",
+  "paths": {
+    "/users": {
+      "post": {
+        "summary": "Create a new user",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "User created successfully"
+          }
+        }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "summary": "Authenticate a user",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "User authenticated"
+          }
+        }
+      }
+    },
+    "/posts": {
+      "get": {
+        "summary": "Retrieve all posts",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful retrieval of posts"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new post",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Post created"
+          }
+        }
+      }
+    }
+  }
+}
