@@ -52,7 +52,24 @@
     "/auth/login": {
       "post": {
         "summary": "Authenticate a user",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "username",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "User authenticated"
